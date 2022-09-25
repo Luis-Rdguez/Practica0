@@ -1,15 +1,14 @@
 package Clases;
 
-<<<<<<< HEAD
+
 import java.io.*;
-=======
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
->>>>>>> branch 'Practica0' of https://github.com/Luis-Rdguez/Practica0.git
+
 import java.util.ArrayList;
 
 public abstract class DatoTabular {
@@ -86,19 +85,6 @@ public abstract class DatoTabular {
 		}
 	//guardar 
 	public static void guardarCSV() {
-<<<<<<< HEAD
-
-			try {
-				BufferedWriter bw = new BufferedWriter(new FileWriter("/Practica0/src/Australian Open Championships, Champion vs Runner-up, Men's Singles,1969 - 2021.csv"));			
-				bw.flush(); 
-				bw.close();
-			} catch (IOException e) {
-				System.out.println("Error E/S: "+e);
-			}
-		}
-		
-	
-=======
 		try {
 			BufferedWriter bw = new BufferedWriter(new FileWriter("/Practica0/src/Australian Open Championships, Champion vs Runner-up, Men's Singles,1969 - 2021.csv"));			
 			bw.flush(); 
@@ -107,5 +93,5 @@ public abstract class DatoTabular {
 			System.out.println("Error E/S: "+e);
 		}
 	}
->>>>>>> branch 'Practica0' of https://github.com/Luis-Rdguez/Practica0.git
+
 }

@@ -1,7 +1,5 @@
 package Clases;
 
-import java.awt.Component;
-
 public class Resultado {
 	Torneo torneo;
 	private int anyos;
@@ -68,11 +66,6 @@ public class Resultado {
 	}
 	public void setResuladoFinal(String resuladoFinal) {
 		this.resuladoFinal = resuladoFinal;
-	}
-
-	public Component getlistaValores() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	
 	

@@ -1,6 +1,9 @@
 package Clases;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -30,6 +33,30 @@ public class VentanaGrandSlam extends JFrame{
         lBotones.add(bGuardar);
         JButton bRanking = new JButton("Evolución Ranking");
         lBotones.add(bRanking);
+        
+        bAnyadir.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+        
+        bGuardar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+        
+        bRanking.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 
         getContentPane().add(pestanyas);
         getContentPane().add(lBotones, BorderLayout.SOUTH);
