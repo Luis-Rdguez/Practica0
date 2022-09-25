@@ -13,6 +13,7 @@ public class VentanaGrandSlam extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setExtendedState(MAXIMIZED_BOTH);
         setTitle("Datos de Grand Slam");
+        
  
         JTabbedPane pestanyas = new JTabbedPane();
         JPanel pResultados = new JPanel();
