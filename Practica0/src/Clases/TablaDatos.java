@@ -7,20 +7,20 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 
 
-public class TablaDatos extends JTable {
-	private HistoriaGrandSlam historia;   
+public class TablaDatos extends DefaultTableModel {
+	private static HistoriaGrandSlams historia;   
 	
 	
-	public TablaDatos (HistoriaGrandSlam historia, Class<?> clase) {
+	public TablaDatos (HistoriaGrandSlams historia, Class<?> clase) {
 		super(generarDatos(clase, historia), generarCabeceras(historia, clase));
 		this.historia = historia;
 	}
-	private static Object [][] generarDatos(Class<?> clase , HistoriaGrandSlam Slam){
+	private static Object [][] generarDatos(Class<?> clase , HistoriaGrandSlams Slam){
 		Object[][] arrayDatos = null;
 		
 		 if (clase.equals(Resultado.class)) {
-			 arrayDatos = new Object[historia.getListaResultados().size()][10];
-			 ArrayList<Resultado> listaDatos = historia.getListaResultados();
+			 arrayDatos = new Object[historia.getResultadosHistoricos().size()][10];
+			 ArrayList<Resultado> listaDatos = historia.getResultadosHistoricos();
 			 for (int columna = 0; columna < listaDatos.size(); columna++) {
 				 Resultado r = listaDatos.get(columna);
 				 for (int fila = 0; fila < r.getlistaValores().size(); fila++) {
@@ -29,8 +29,8 @@ public class TablaDatos extends JTable {
 			 }
 			 
 		 } else if (clase.equals(Tenista.class)) {
-			 arrayDatos = new Object[historia.getListaTenistas().size()][3];
-			 TreeMap<String, Tenista>mapaDatos = historia.getListaTenistas();
+			 arrayDatos = new Object[historia.getTenistas().size()][3];
+			 TreeMap<String, Tenista>mapaDatos = historia.getTenistas();
 			 for (int columna = 0; columna < mapaDatos.size(); columna++) {
 				 ArrayList<Tenista> tenistas = new Arraylist<>();
 				 
@@ -62,12 +62,12 @@ public class TablaDatos extends JTable {
 	}
 	
 	
-	private static Object[] generarCabeceras(HistoriaGrandSlam historia, Class<?> clase) {
+	private static Object[] generarCabeceras(HistoriaGrandSlams historia, Class<?> clase) {
 		
 		if (clase.equals(Resultado.class)) {
-			return historia.getCabecerasResultado(historia.getListaResultados());
+			return historia.getCabecerasResultado(historia.getResultadosHistoricos());
 		}else if (clase.equals(Tenista.class)) {
-			return historia.getCabeceraMapasTenista(historia.getListaTenistas());
+			return historia.getCabeceraMapasTenista(historia.getTenistas());
 		} else {
 			return historia. getCabeceraMapasTorneo(historia.getListaTorneosNombre());
 		}
