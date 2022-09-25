@@ -14,13 +14,13 @@ public class VentanaGrandSlam extends JFrame{
         setExtendedState(MAXIMIZED_BOTH);
         setTitle("Datos de Grand Slam");
  
-        JTabbedPane pestañas = new JTabbedPane();
+        JTabbedPane pestanyas = new JTabbedPane();
         JPanel pResultados = new JPanel();
-        pestañas.addTab("Resultados", pResultados);
+        pestanyas.addTab("Resultados", pResultados);
         JPanel pTenistas = new JPanel();
-        pestañas.addTab("Tenistas", pTenistas);
+        pestanyas.addTab("Tenistas", pTenistas);
         JPanel pTorneos = new JPanel();
-        pestañas.addTab("Torneos", pTorneos);
+        pestanyas.addTab("Torneos", pTorneos);
         
         JPanel lBotones = new JPanel();
         JButton bAnyadir = new JButton("Añadir");
@@ -30,7 +30,7 @@ public class VentanaGrandSlam extends JFrame{
         JButton bRanking = new JButton("Evolución Ranking");
         lBotones.add(bRanking);
 
-        getContentPane().add(pestañas);
+        getContentPane().add(pestanyas);
         getContentPane().add(lBotones, BorderLayout.SOUTH);
         setVisible(true);
     }
