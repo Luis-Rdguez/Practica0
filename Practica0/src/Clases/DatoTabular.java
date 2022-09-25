@@ -1,8 +1,10 @@
 package Clases;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -80,7 +82,12 @@ public abstract class DatoTabular {
 		}
 	
 	public static void guardarCSV() {
-		
-		
+		try {
+			BufferedWriter bw = new BufferedWriter(new FileWriter("/Practica0/src/Australian Open Championships, Champion vs Runner-up, Men's Singles,1969 - 2021.csv"));			
+			bw.flush(); 
+			bw.close();
+		} catch (IOException e) {
+			System.out.println("Error E/S: "+e);
+		}
 	}
 }

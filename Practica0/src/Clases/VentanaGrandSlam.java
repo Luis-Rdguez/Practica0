@@ -5,15 +5,14 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 
 public class VentanaGrandSlam extends JFrame{
-
-	
 	public VentanaGrandSlam() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setExtendedState(MAXIMIZED_BOTH);
         setTitle("Datos de Grand Slam");
- 
+        
         JTabbedPane pestanyas = new JTabbedPane();
         JPanel pResultados = new JPanel();
         pestanyas.addTab("Resultados", pResultados);
@@ -37,6 +36,6 @@ public class VentanaGrandSlam extends JFrame{
  
     public static void main(String[] args) {
     	VentanaGrandSlam ventana = new VentanaGrandSlam();
- 
+    	
     }
 }
