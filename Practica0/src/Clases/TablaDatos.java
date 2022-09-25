@@ -8,7 +8,7 @@ import java.util.TreeMap;
 
 
 public class TablaDatos extends JTable {
-	private HistoriaGrandSlam historia;
+	private HistoriaGrandSlam historia;  
 	
 	
 	public TablaDatos (HistoriaGrandSlam historia, Class<?> clase) {
